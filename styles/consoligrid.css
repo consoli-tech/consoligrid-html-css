@@ -1,0 +1,64 @@
+/***********************************************
+ * Desktop
+ **********************************************/
+
+
+
+/** Menu */
+
+.cu-logo-menu {
+    padding: 10px 89px 10px 50px;
+}
+
+.main-nav {
+    background-color: #fff;
+}
+
+.main-nav-middle {
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.nav-item a {
+    color: #001b2d;
+    text-decoration: none;
+}
+
+.nav-item {
+    text-align: left;
+    line-height: 1.25;
+    letter-spacing: normal;
+    opacity: 0.5;
+    padding: 40px 25px 40px 25px;
+}
+
+.nav-item-last {
+    text-align: left;
+    line-height: 1.25;
+    letter-spacing: normal;
+    padding: 40px 25px 40px 25px;
+}
+
+.main-nav-right {
+    padding-right: 50px;
+}
+
+/** Components **/
+
+.btn-blue {
+    width: 120px;
+    height: 44px;
+    padding: 12px 31px;
+    border-radius: 34px;
+    background-color: #008fd9;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
