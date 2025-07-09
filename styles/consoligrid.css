@@ -8,6 +8,7 @@
 
 .cu-logo-menu {
     padding: 10px 89px 10px 50px;
+    width: 162px;
 }
 
 .main-nav {
@@ -23,6 +24,7 @@
     display: flex;
     justify-content: space-between;
     list-style: none;
+    margin: 0;
 }
 
 .nav-item a {
@@ -47,6 +49,28 @@
 
 .main-nav-right {
     padding-right: 50px;
+}
+
+/** Slider **/
+
+.slider {
+    width: 100%;
+    height: 500px;
+    background-image: url('../img/banner.png');
+}
+
+.slider-heading {
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 500;
+    padding: 120px 259px 20px 259px;
+    margin: 0;
+}
+
+.slider-text {
+    color: #fff;
+    text-align: center;
 }
 
 /** Components **/
