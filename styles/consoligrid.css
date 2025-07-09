@@ -37,7 +37,7 @@
     line-height: 1.25;
     letter-spacing: normal;
     opacity: 0.5;
-    padding: 40px 25px 40px 25px;
+    padding: 40px 20px; /** Change to 15 PX for slightly smaller screens **/
 }
 
 .nav-item-last {
