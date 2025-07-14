@@ -1,8 +1,82 @@
 /***********************************************
+ * Design-Specific Avenir Fonts
+ ***********************************************/
+
+@font-face {
+    font-family: 'Avenir-Light';
+    src: url('../fonts/avenir_light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir-Book';
+    src: url('../fonts/avenir_book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir-Book-Oblique';
+    src: url('../fonts/avenir_book_oblique.ttf') format('truetype');
+    font-weight: normal;
+    font-style: oblique;
+}
+
+@font-face {
+    font-family: 'Avenir-Regular';
+    src: url('../fonts/avenir_regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir-Roman';
+    src: url('../fonts/avenir_roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir-Medium';
+    src: url('../fonts/avenir_medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir-Oblique';
+    src: url('../fonts/avenir_oblique.ttf') format('truetype');
+    font-weight: normal;
+    font-style: oblique;
+}
+
+@font-face {
+    font-family: 'Avenir-Black';
+    src: url('../fonts/avenir_black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir-Heavy';
+    src: url('../fonts/avenir_heavy.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*.montserrat-bold {*/
+/*                 font-family: "Montserrat", sans-serif;*/
+/*                 font-optical-sizing: auto;*/
+/*                 font-weight: 500;*/
+/*                 font-style: normal;*/
+/*             }*/
+
+
+/***********************************************
  * Desktop
  **********************************************/
-
-
 
 /** Menu */
 
@@ -30,6 +104,7 @@
 
 .nav-item a {
     color: #001b2d;
+    font-family: 'Avenir-Regular', sans-serif;
     text-decoration: none;
 }
 
@@ -61,12 +136,22 @@
 }
 
 .slider-heading {
+    font-family: 'Avenir-Regular', sans-serif;
     text-align: center;
     color: #fff;
     font-size: 50px;
-    font-weight: 500;
+    font-weight: bold;
     padding: 120px 259px 20px 259px;
     margin: 0;
+}
+
+.slider-paragraph {
+    font-family: 'Avenir-Roman', sans-serif;
+    font-size: 16px;
+    letter-spacing: normal;
+    text-align: center;
+    line-height: 1.88;
+    color: #fff;
 }
 
 .slider-text {
@@ -83,7 +168,8 @@
     border-radius: 34px;
     background-color: #008fd9;
     color: #fff;
-    font-weight: bold;
+    /*font-weight: bold;*/
     text-decoration: none;
+    font-family: 'Avenir-Regular', sans-serif;
 }
 
