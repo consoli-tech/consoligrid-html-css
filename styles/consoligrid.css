@@ -51,7 +51,7 @@
 }
 
 @font-face {
-    font-family: 'Avenir-Regular';
+    font-family: 'Avenir-Medium';
     src: url('../fonts/avenir_regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
@@ -123,7 +123,7 @@
 
 .nav-item a {
     color: #001b2d;
-    font-family: 'Avenir-Regular', sans-serif;
+    font-family: 'Avenir-Medium', sans-serif;
     text-decoration: none;
 }
 
@@ -170,11 +170,11 @@
 }
 
 .slider-heading {
-    font-family: 'Avenir-Regular', sans-serif;
+    font-family: 'Avenir-Medium', sans-serif;
     text-align: center;
     color: #fff;
     font-size: 50px;
-    font-weight: bold;
+    font-weight: 500;
     padding: 120px 259px 20px 259px;
     margin: 0;
 }
@@ -204,7 +204,8 @@
 }
 
 .online-bill-pay-munibilling h1 {
-    font-family: 'Avenir-Regular', sans-serif;
+    font-family: 'Avenir-Medium', sans-serif;
+    font-weight: 500;
 }
 
 .online-bill-pay-munibilling p {
@@ -227,15 +228,24 @@
 }
 
 .home-page-main-container h1 {
-    font-family: 'Avenir', sans-serif;
+    font-family: 'Avenir-Medium', sans-serif;
     margin-bottom: 40px;
     text-align: center;
+    font-weight: 500;
 }
 
 .home-page-main-container p {
     font-family: 'Avenir-Roman', sans-serif;
     text-align: center;
     line-height: 1.88;
+}
+
+/** FAQ Section **/
+
+.faq-h1 {
+    font-family: 'Avenir-Medium', sans-serif;
+    margin-top: 80px;
+    text-align: center;
 }
 
 /** Components **/
@@ -248,7 +258,7 @@
     background-color: #008fd9;
     color: #fff;
     text-decoration: none;
-    font-family: 'Avenir-Regular', sans-serif;
+    font-family: 'Avenir-Medium', sans-serif;
 }
 
 /** Utils **/
