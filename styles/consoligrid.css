@@ -164,6 +164,11 @@
     align-items: center;
 }
 
+.slider-link-wrapper .btn-blue {
+    text-align: center;
+    padding: 8px;
+}
+
 .slider-heading {
     font-family: 'Avenir-Regular', sans-serif;
     text-align: center;
