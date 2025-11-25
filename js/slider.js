@@ -81,7 +81,7 @@
         currentSlide = index;
 
         // Calculate transform percentage
-        const translateX = -(currentSlide * 100) / slides.length;
+        const translateX = -(currentSlide * 100);
         slider.style.transform = `translateX(${translateX}%)`;
 
         updateDots();
