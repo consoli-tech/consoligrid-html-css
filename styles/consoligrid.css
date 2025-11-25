@@ -146,6 +146,22 @@
     padding-right: 50px;
 }
 
+/** Footer **/
+
+.footer-container {
+    background-color: #001b2d;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container p {
+    margin: 0 auto;
+    color: #fff;
+    font-family: 'Avenir-Medium', sans-serif;
+}
+
 /** Slider **/
 
 .slider-container {
