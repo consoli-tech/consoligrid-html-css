@@ -394,3 +394,381 @@
     margin-bottom: 30px;
 }
 
+/** Responsive Images **/
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/** Mobile Navigation (Hamburger Menu) **/
+
+.mobile-nav-header {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+    position: relative;
+    z-index: 1002;
+}
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+.hamburger-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1003;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.hamburger-line {
+    width: 28px;
+    height: 3px;
+    background-color: #001b2d;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+    display: block;
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+/***********************************************
+ * RESPONSIVE STYLES
+ **********************************************/
+
+/** Tablet (768px - 1024px) **/
+@media screen and (max-width: 1024px) {
+    .cu-logo-menu {
+        padding: 10px 30px 10px 30px;
+        width: 140px;
+    }
+
+    .nav-item {
+        padding: 40px 12px;
+        font-size: 14px;
+    }
+
+    .nav-item-last {
+        padding: 40px 15px 40px 15px;
+    }
+
+    .main-nav-right {
+        padding-right: 30px;
+    }
+
+    .slider-heading {
+        font-size: 40px;
+        padding: 100px 150px 20px 150px;
+    }
+
+    .slider-paragraph {
+        font-size: 15px;
+        padding: 0 100px;
+    }
+
+    .slider-container {
+        height: 450px;
+    }
+
+    .billing-container {
+        padding: 60px 40px;
+        margin: 0 60px;
+    }
+
+    .cu-logo-phone {
+        width: 400px;
+    }
+
+    .home-page-main-container {
+        padding: 60px 80px;
+    }
+
+    .faq-container {
+        margin: 0 80px;
+    }
+
+    .faq-h1 {
+        margin-top: 60px;
+    }
+}
+
+/** Mobile (320px - 767px) **/
+@media screen and (max-width: 767px) {
+    /** Mobile Navigation **/
+    .mobile-nav-header {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-nav-header .cu-logo-menu {
+        width: 120px;
+        padding: 0;
+    }
+
+    .main-nav {
+        position: relative;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: #fff;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        padding: 80px 0 20px 0;
+        transition: right 0.3s ease;
+        z-index: 1000;
+        overflow-y: auto;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu.active {
+        right: 0;
+    }
+
+    .main-nav-left,
+    .main-nav-middle,
+    .main-nav-right {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .main-nav-left {
+        display: none;
+    }
+
+    .nav-item,
+    .nav-item-last {
+        padding: 15px 25px;
+        text-align: left;
+        border-bottom: 1px solid rgba(204, 204, 204, 0.3);
+        opacity: 1;
+    }
+
+    .nav-item a,
+    .nav-item-last a {
+        display: block;
+        width: 100%;
+    }
+
+    .nav-item-last .btn-blue {
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 12px 20px;
+    }
+
+    /** Add spacing for fixed header **/
+    body {
+        padding-top: 70px;
+    }
+
+    /** Slider **/
+    .slider-container {
+        height: 400px;
+    }
+
+    .slider-heading {
+        font-size: 28px;
+        padding: 60px 20px 15px 20px;
+    }
+
+    .slider-paragraph {
+        font-size: 14px;
+        padding: 0 20px;
+        line-height: 1.6;
+    }
+
+    .slider-link-wrapper .btn-blue {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+
+    .dots {
+        bottom: 20px;
+    }
+
+    .dot {
+        height: 10px;
+        width: 10px;
+        margin: 0 5px;
+    }
+
+    /** Billing Section **/
+    .billing-container {
+        flex-direction: column;
+        padding: 40px 20px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .cu-logo-phone {
+        width: 100%;
+        max-width: 350px;
+        margin-bottom: 30px;
+    }
+
+    .online-bill-pay-munibilling h1 {
+        font-size: 24px;
+        margin-top: 0;
+    }
+
+    .online-bill-pay-munibilling p {
+        font-size: 15px;
+    }
+
+    /** Main Section **/
+    .home-page-main-container {
+        padding: 40px 20px;
+    }
+
+    .home-page-main-container h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .home-page-main-container p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    /** FAQ Section **/
+    .faq-container {
+        margin: 0 20px;
+    }
+
+    .faq-h1 {
+        font-size: 24px;
+        margin-top: 40px;
+    }
+
+    .faq-closed-question {
+        padding: 15px 0;
+    }
+
+    .faq-open-question {
+        padding: 20px;
+    }
+
+    .faq-question h1 {
+        font-size: 16px;
+    }
+
+    .faq-icon {
+        width: 20px;
+        height: 20px;
+        margin-left: 15px;
+    }
+
+    .faq-open-question .faq-answer {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /** Footer **/
+    .footer-container {
+        padding: 20px 15px;
+    }
+
+    .footer-container p {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    /** Buttons **/
+    .btn-blue {
+        font-size: 14px;
+        padding: 10px 20px;
+        width: auto;
+    }
+
+}
+
+/** Small Mobile (320px - 374px) **/
+@media screen and (max-width: 374px) {
+    .mobile-nav-header {
+        padding: 12px 15px;
+    }
+
+    .mobile-nav-header .cu-logo-menu {
+        width: 100px;
+    }
+
+    .slider-heading {
+        font-size: 24px;
+        padding: 50px 15px 15px 15px;
+    }
+
+    .slider-paragraph {
+        font-size: 13px;
+        padding: 0 15px;
+    }
+
+    .slider-container {
+        height: 350px;
+    }
+
+    .cu-logo-phone {
+        max-width: 280px;
+    }
+
+    .home-page-main-container h1,
+    .faq-h1,
+    .online-bill-pay-munibilling h1 {
+        font-size: 20px;
+    }
+}
+
