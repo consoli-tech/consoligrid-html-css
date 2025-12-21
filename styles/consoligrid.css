@@ -135,6 +135,19 @@
     padding: 40px 20px; /** Change to 15 PX for slightly smaller screens **/
 }
 
+.nav-item-active {
+    text-align: left;
+    line-height: 1.25;
+    letter-spacing: normal;
+    padding: 40px 20px;
+}
+
+.nav-item-active a {
+    color: #000;
+    font-family: 'Avenir-Medium', sans-serif;
+    text-decoration: none;
+}
+
 .nav-item-last {
     text-align: left;
     line-height: 1.25;
@@ -489,6 +502,11 @@ body.menu-open {
         font-size: 14px;
     }
 
+    .nav-item-active {
+        padding: 40px 12px;
+        font-size: 14px;
+    }
+
     .nav-item-last {
         padding: 40px 15px 40px 15px;
     }
@@ -591,6 +609,7 @@ body.menu-open {
     }
 
     .nav-item,
+    .nav-item-active,
     .nav-item-last {
         padding: 15px 25px;
         text-align: left;
@@ -599,6 +618,7 @@ body.menu-open {
     }
 
     .nav-item a,
+    .nav-item-active a,
     .nav-item-last a {
         display: block;
         width: 100%;
