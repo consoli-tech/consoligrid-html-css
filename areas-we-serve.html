@@ -1,94 +1,67 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <title>Polygon with Legend</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="initial-scale=1, width=device-width" />
-  <style>
-      #map {
-          height: 100vh;
-          width: 100%;
-      }
-      #legend {
-          background: white;
-          padding: 10px;
-          margin: 10px;
-          font-size: 14px;
-          font-family: Arial, sans-serif;
-          border: 1px solid black;
-      }
-      .legend-title {
-          font-weight: bold;
-          margin-bottom: 5px;
-      }
-      .legend-color {
-          display: inline-block;
-          width: 12px;
-          height: 12px;
-          margin-right: 6px;
-          vertical-align: middle;
-      }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/consoligrid.css">
+  <title>Consolidated Utilities</title>
 </head>
 <body>
-<div id="map"></div>
-<div id="legend">
-  <div class="legend-title">Legend</div>
-  <div><span class="legend-color" style="background-color: #555555;"></span>Consolidated Utilities</div>
-</div>
-<script>
-  function cross(o, a, b) {
-    return (a.lat - o.lat) * (b.lng - o.lng) - (a.lng - o.lng) * (b.lat - o.lat);
-  }
 
-  function jarvisMarch(points) {
-    if (points.length < 3) return points;
-    const hull = [];
-    let leftmost = 0;
-    for (let i = 1; i < points.length; i++) {
-      if (points[i].lng < points[leftmost].lng) leftmost = i;
-    }
-    let p = leftmost;
-    do {
-      hull.push(points[p]);
-      let q = (p + 1) % points.length;
-      for (let r = 0; r < points.length; r++) {
-        if (cross(points[p], points[r], points[q]) > 0) q = r;
-      }
-      p = q;
-    } while (p !== leftmost);
-    return hull;
-  }
+<!-- Begin Main Navigation -->
+<nav class="main-nav">
+  <div class="mobile-nav-header">
+    <a href="index.html"><img class="cu-logo-menu" src="img/consolidated-logo-1.png" alt="Consolidated Utilities Logo"></a>
+    <button class="hamburger-menu" aria-label="Toggle navigation menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+  <div class="menu-overlay"></div>
+  <ul class="menu">
+    <div class="main-nav-left">
+      <li><a href="index.html"><img class="cu-logo-menu" src="img/consolidated-logo-1.png" alt="Consolidated Utilities Logo"></a></li>
+    </div>
+    <div class="main-nav-middle">
+      <li class="nav-item"><a href="#">Policies</a></li>
+      <li class="nav-item"><a href="#">About Us</a></li>
+      <li class="nav-item"><a href="#">Billing</a></li>
+      <li class="nav-item-active"><a href="#">Areas We Serve</a></li>
+      <li class="nav-item"><a href="#">Rates</a></li>
+      <li class="nav-item"><a href="#">News</a></li>
+      <li class="nav-item"><a href="#">Meter Tap in Fees</a></li>
+      <li class="nav-item"><a href="#">Conservation Efforts</a></li>
+    </div>
+    <div class="main-nav-right">
+      <li class="nav-item-last"><a class="btn-blue" href="#">Contact</a></li>
+    </div>
+  </ul>
+</nav>
+<!-- End Main Naviation -->
 
-  function initMap() {
-    const center = { lat: 32.04164783550834, lng: -81.26701509939302 };
-    const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 13,
-      center: center,
-    });
+<section class="page-header">
+  <h1>Areas We Serve</h1>
+</section>
 
-    const polygonCoords = [{'lat': 32.023537, 'lng': -81.24185}, {'lat': 32.021278, 'lng': -81.236762}, {'lat': 32.020994, 'lng': -81.239106}, {'lat': 32.027464, 'lng': -81.242757}, {'lat': 32.020371, 'lng': -81.236223}, {'lat': 32.019779, 'lng': -81.237797}, {'lat': 32.020063, 'lng': -81.235591}, {'lat': 32.021271, 'lng': -81.238748}, {'lat': 32.023248, 'lng': -81.238295}, {'lat': 32.020249, 'lng': -81.235353}, {'lat': 32.020611, 'lng': -81.239598}, {'lat': 32.025234, 'lng': -81.243021}, {'lat': 32.02367, 'lng': -81.239668}, {'lat': 32.026515, 'lng': -81.242246}, {'lat': 32.020923, 'lng': -81.23551}, {'lat': 32.025329, 'lng': -81.242107}, {'lat': 32.020056, 'lng': -81.237439}, {'lat': 32.023532, 'lng': -81.241189}, {'lat': 32.026171, 'lng': -81.244345}, {'lat': 32.02008, 'lng': -81.236457}, {'lat': 32.023245, 'lng': -81.23921}, {'lat': 32.020852, 'lng': -81.236303}, {'lat': 32.022464, 'lng': -81.238546}, {'lat': 32.027059, 'lng': -81.243019}, {'lat': 32.021633, 'lng': -81.236269}, {'lat': 32.021221, 'lng': -81.24025}, {'lat': 32.023481, 'lng': -81.240121}, {'lat': 32.024241, 'lng': -81.241952}, {'lat': 32.021879, 'lng': -81.239402}, {'lat': 32.025493, 'lng': -81.240689}, {'lat': 32.025644, 'lng': -81.24354}, {'lat': 32.023201, 'lng': -81.240872}, {'lat': 32.019878, 'lng': -81.235829}, {'lat': 32.021038, 'lng': -81.236066}, {'lat': 32.021627, 'lng': -81.240685}, {'lat': 32.023865, 'lng': -81.240642}, {'lat': 32.022939, 'lng': -81.241206}, {'lat': 32.024956, 'lng': -81.243377}, {'lat': 32.02577, 'lng': -81.243924}, {'lat': 32.022006, 'lng': -81.240196}, {'lat': 32.023109, 'lng': -81.238145}, {'lat': 32.020003, 'lng': -81.238945}, {'lat': 32.021767, 'lng': -81.236851}, {'lat': 32.026777, 'lng': -81.243405}, {'lat': 32.023434, 'lng': -81.242647}, {'lat': 32.022571, 'lng': -81.241681}, {'lat': 32.019634, 'lng': -81.237025}, {'lat': 32.024814, 'lng': -81.243224}, {'lat': 32.024105, 'lng': -81.242461}, {'lat': 32.01854, 'lng': -81.237504}, {'lat': 32.022081, 'lng': -81.239621}, {'lat': 32.019307, 'lng': -81.23656}, {'lat': 32.02495, 'lng': -81.242716}, {'lat': 32.027359, 'lng': -81.242493}, {'lat': 32.025621, 'lng': -81.242439}, {'lat': 32.023279, 'lng': -81.239903}, {'lat': 32.025627, 'lng': -81.245075}, {'lat': 32.026092, 'lng': -81.242973}, {'lat': 32.020259, 'lng': -81.237657}, {'lat': 32.019192, 'lng': -81.238073}, {'lat': 32.020461, 'lng': -81.237875}, {'lat': 32.024388, 'lng': -81.242766}, {'lat': 32.024381, 'lng': -81.239518}, {'lat': 32.024672, 'lng': -81.243072}, {'lat': 32.022486, 'lng': -81.240057}, {'lat': 32.019598, 'lng': -81.238509}, {'lat': 32.023254, 'lng': -81.241545}, {'lat': 32.021018, 'lng': -81.240032}, {'lat': 32.022415, 'lng': -81.238187}, {'lat': 32.01892, 'lng': -81.237059}, {'lat': 32.020386, 'lng': -81.238451}, {'lat': 32.023157, 'lng': -81.242334}, {'lat': 32.027347, 'lng': -81.242248}, {'lat': 32.026708, 'lng': -81.24093}, {'lat': 32.017038, 'lng': -81.235727}, {'lat': 32.019854, 'lng': -81.237221}, {'lat': 32.018916, 'lng': -81.236418}, {'lat': 32.024507, 'lng': -81.239696}, {'lat': 32.025092, 'lng': -81.242868}, {'lat': 32.027149, 'lng': -81.242878}, {'lat': 32.024239, 'lng': -81.239365}, {'lat': 32.021829, 'lng': -81.237794}, {'lat': 32.020409, 'lng': -81.23938}, {'lat': 32.023956, 'lng': -81.239059}, {'lat': 32.024383, 'lng': -81.242105}, {'lat': 32.023812, 'lng': -81.239821}, {'lat': 32.022065, 'lng': -81.236314}, {'lat': 32.020549, 'lng': -81.234788}, {'lat': 32.022266, 'lng': -81.238812}, {'lat': 32.023684, 'lng': -81.24034}, {'lat': 32.022411, 'lng': -81.240633}, {'lat': 32.025254, 'lng': -81.243699}, {'lat': 32.020815, 'lng': -81.239815}, {'lat': 32.021829, 'lng': -81.240904}, {'lat': 32.02453, 'lng': -81.242919}, {'lat': 32.026035, 'lng': -81.244537}, {'lat': 32.025533, 'lng': -81.243343}, {'lat': 32.020184, 'lng': -81.238233}, {'lat': 32.023987, 'lng': -81.239933}, {'lat': 32.023814, 'lng': -81.238906}, {'lat': 32.026781, 'lng': -81.241644}, {'lat': 32.0198, 'lng': -81.238727}, {'lat': 32.022032, 'lng': -81.241122}, {'lat': 32.023293, 'lng': -81.238762}, {'lat': 32.023816, 'lng': -81.241494}, {'lat': 32.022205, 'lng': -81.241356}, {'lat': 32.019576, 'lng': -81.237579}, {'lat': 32.018384, 'lng': -81.236547}, {'lat': 32.023103, 'lng': -81.239057}, {'lat': 32.025454, 'lng': -81.241535}, {'lat': 32.021463, 'lng': -81.236524}, {'lat': 32.021939, 'lng': -81.238467}, {'lat': 32.025827, 'lng': -81.241018}, {'lat': 32.026334, 'lng': -81.244105}, {'lat': 32.01848, 'lng': -81.236074}, {'lat': 32.025381, 'lng': -81.243179}, {'lat': 32.024222, 'lng': -81.241031}, {'lat': 32.024246, 'lng': -81.242614}, {'lat': 32.026924, 'lng': -81.241854}, {'lat': 32.021676, 'lng': -81.239184}, {'lat': 32.023531, 'lng': -81.2386}, {'lat': 32.026228, 'lng': -81.240976}, {'lat': 32.020808, 'lng': -81.237242}, {'lat': 32.017907, 'lng': -81.236637}, {'lat': 32.020734, 'lng': -81.235738}, {'lat': 32.022962, 'lng': -81.238905}, {'lat': 32.018624, 'lng': -81.236729}, {'lat': 32.022412, 'lng': -81.238196}, {'lat': 32.022377, 'lng': -81.237073}, {'lat': 32.020894, 'lng': -81.234715}, {'lat': 32.025046, 'lng': -81.241802}, {'lat': 32.022135, 'lng': -81.238116}, {'lat': 32.017377, 'lng': -81.236081}, {'lat': 32.023673, 'lng': -81.238753}, {'lat': 32.022874, 'lng': -81.239467}, {'lat': 32.025913, 'lng': -81.244711}, {'lat': 32.026719, 'lng': -81.241448}, {'lat': 32.026395, 'lng': -81.242972}, {'lat': 32.023389, 'lng': -81.238447}, {'lat': 32.018694, 'lng': -81.235697}, {'lat': 32.020206, 'lng': -81.239163}, {'lat': 32.023674, 'lng': -81.241342}, {'lat': 32.019247, 'lng': -81.236827}, {'lat': 32.023821, 'lng': -81.242156}, {'lat': 32.021395, 'lng': -81.237326}, {'lat': 32.025112, 'lng': -81.240114}, {'lat': 32.02282, 'lng': -81.238752}, {'lat': 32.019045, 'lng': -81.236232}, {'lat': 32.018825, 'lng': -81.236637}, {'lat': 32.026934, 'lng': -81.24322}, {'lat': 32.018056, 'lng': -81.236792}, {'lat': 32.024069, 'lng': -81.240526}, {'lat': 32.024808, 'lng': -81.242563}, {'lat': 32.021232, 'lng': -81.237655}, {'lat': 32.02174, 'lng': -81.238245}, {'lat': 32.022191, 'lng': -81.237311}, {'lat': 32.025287, 'lng': -81.244678}, {'lat': 32.021069, 'lng': -81.23853}, {'lat': 32.022689, 'lng': -81.240275}, {'lat': 32.018734, 'lng': -81.237297}, {'lat': 32.022005, 'lng': -81.237548}, {'lat': 32.026401, 'lng': -81.24195}, {'lat': 32.023076, 'lng': -81.239685}, {'lat': 32.023396, 'lng': -81.241698}, {'lat': 32.026715, 'lng': -81.241222}, {'lat': 32.024389, 'lng': -81.240817}, {'lat': 32.024709, 'lng': -81.244023}, {'lat': 32.019009, 'lng': -81.237837}, {'lat': 32.024525, 'lng': -81.242258}, {'lat': 32.022671, 'lng': -81.239249}, {'lat': 32.021776, 'lng': -81.235924}, {'lat': 32.018206, 'lng': -81.236938}, {'lat': 32.023298, 'lng': -81.242487}, {'lat': 32.024746, 'lng': -81.240684}, {'lat': 32.021581, 'lng': -81.237089}, {'lat': 32.021196, 'lng': -81.239324}, {'lat': 32.019395, 'lng': -81.238291}, {'lat': 32.023529, 'lng': -81.239516}, {'lat': 32.024849, 'lng': -81.244179}, {'lat': 32.022406, 'lng': -81.236158}, {'lat': 32.022874, 'lng': -81.242027}, {'lat': 32.024013, 'lng': -81.2404}, {'lat': 32.026093, 'lng': -81.242406}, {'lat': 32.018191, 'lng': -81.236288}, {'lat': 32.02627, 'lng': -81.243225}, {'lat': 32.024667, 'lng': -81.24241}, {'lat': 32.022469, 'lng': -81.23903}, {'lat': 32.025299, 'lng': -81.241377}, {'lat': 32.024098, 'lng': -81.239212}, {'lat': 32.024099, 'lng': -81.2418}, {'lat': 32.024567, 'lng': -81.243871}, {'lat': 32.019679, 'lng': -81.236096}, {'lat': 32.0211, 'lng': -81.237008}, {'lat': 32.025335, 'lng': -81.240519}, {'lat': 32.019374, 'lng': -81.23736}, {'lat': 32.019981, 'lng': -81.238015}, {'lat': 32.021804, 'lng': -81.239978}, {'lat': 32.021424, 'lng': -81.240468}, {'lat': 32.024535, 'lng': -81.240628}, {'lat': 32.028274, 'lng': -81.241059}, {'lat': 32.02584, 'lng': -81.241886}, {'lat': 32.017738, 'lng': -81.236444}, {'lat': 32.026249, 'lng': -81.2423}, {'lat': 32.021601, 'lng': -81.23976}, {'lat': 32.025144, 'lng': -81.24122}, {'lat': 32.024058, 'lng': -81.240136}, {'lat': 32.022209, 'lng': -81.240415}, {'lat': 32.020866, 'lng': -81.238312}, {'lat': 32.025187, 'lng': -81.241955}, {'lat': 32.021474, 'lng': -81.238966}, {'lat': 32.018624, 'lng': -81.235932}, {'lat': 32.021537, 'lng': -81.238027}, {'lat': 32.020548, 'lng': -81.235976}, {'lat': 32.024992, 'lng': -81.244326}, {'lat': 32.020454, 'lng': -81.235096}, {'lat': 32.020589, 'lng': -81.238669}, {'lat': 32.020282, 'lng': -81.236675}, {'lat': 32.019106, 'lng': -81.23682}, {'lat': 32.022757, 'lng': -81.238532}, {'lat': 32.025922, 'lng': -81.24279}, {'lat': 32.02462, 'lng': -81.241344}, {'lat': 32.023958, 'lng': -81.241647}, {'lat': 32.022942, 'lng': -81.237746}, {'lat': 32.025764, 'lng': -81.24262}, {'lat': 32.025421, 'lng': -81.243878}, {'lat': 32.026497, 'lng': -81.242768}, {'lat': 32.018354, 'lng': -81.237089}, {'lat': 32.024762, 'lng': -81.241497}, {'lat': 32.024861, 'lng': -81.240915}, {'lat': 32.026073, 'lng': -81.241202}, {'lat': 32.021907, 'lng': -81.235554}, {'lat': 32.022312, 'lng': -81.237693}, {'lat': 32.022894, 'lng': -81.240496}, {'lat': 32.025623, 'lng': -81.241692}, {'lat': 32.023112, 'lng': -81.241392}, {'lat': 32.020504, 'lng': -81.236868}, {'lat': 32.024904, 'lng': -81.241649}, {'lat': 32.023576, 'lng': -81.242801}, {'lat': 32.021219, 'lng': -81.234835}, {'lat': 32.025746, 'lng': -81.242156}, {'lat': 32.022569, 'lng': -81.236851}, {'lat': 32.023995, 'lng': -81.243266}, {'lat': 32.02148, 'lng': -81.235295}, {'lat': 32.02579, 'lng': -81.244885}, {'lat': 32.025003, 'lng': -81.241068}, {'lat': 32.026618, 'lng': -81.24363}, {'lat': 32.025476, 'lng': -81.242266}, {'lat': 32.02589, 'lng': -81.24164}, {'lat': 32.021224, 'lng': -81.235828}, {'lat': 32.024505, 'lng': -81.241163}, {'lat': 32.021953, 'lng': -81.236613}, {'lat': 32.021399, 'lng': -81.239542}, {'lat': 32.020666, 'lng': -81.236541}, {'lat': 32.026241, 'lng': -81.240725}, {'lat': 32.025941, 'lng': -81.243695}, {'lat': 32.026631, 'lng': -81.240477}, {'lat': 32.022284, 'lng': -81.239839}, {'lat': 32.025667, 'lng': -81.240857}, {'lat': 32.025177, 'lng': -81.240349}, {'lat': 32.023387, 'lng': -81.239363}, {'lat': 32.022209, 'lng': -81.237934}, {'lat': 32.022634, 'lng': -81.240829}, {'lat': 32.023963, 'lng': -81.242308}, {'lat': 32.020664, 'lng': -81.238093}, {'lat': 32.024778, 'lng': -81.240102}, {'lat': 32.026556, 'lng': -81.242522}, {'lat': 32.023391, 'lng': -81.241036}];
-    const convexHull = jarvisMarch(polygonCoords);
+<section class="areas-we-serve">
+  <figure>
+    <img src="img/maintanence.webp" alt="This page is down for maintenance">
+    <figcaption class="figcaption">This page is down for maintenance</figcaption>
+  </figure>
+</section>
 
-    const polygon = new google.maps.Polygon({
-      paths: convexHull,
-      strokeColor: "#555555",
-      strokeOpacity: 0.8,
-      strokeWeight: 2,
-      fillColor: "#555555",
-      fillOpacity: 0.45,
-    });
-    polygon.setMap(map);
 
-    map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(
-      document.getElementById("legend")
-    );
-  }
-</script>
-<script
-    async
-    defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlKnYxgo5ibrxgbiDj_gtWtWdTdB_yCXA&callback=initMap">
-</script>
+<footer class="footer-container">
+  <p>Copyright &copy; 2011 - 2024, Consolidated Utilities, Inc. All Rights Reserved</p>
+</footer>
+
+<script src="js/slider.js"></script>
+<script src="js/faq.js"></script>
+<script src="js/mobile-menu.js"></script>
 </body>
 </html>
