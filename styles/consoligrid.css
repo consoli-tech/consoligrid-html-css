@@ -426,6 +426,77 @@ body {
     font-weight: 500;
 }
 
+/** Rates Page Header **/
+
+.page-header-rates {
+    background-image: url('../img/banner.png');
+    width: 100%;
+    padding: 60px 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-header-rates h1 {
+    font-family: 'Avenir', sans-serif;
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+    margin: 0 0 30px;
+}
+
+.rates-search {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 540px;
+    position: relative;
+}
+
+.rates-search input {
+    width: 100%;
+    height: 50px;
+    padding: 0 60px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-family: 'Avenir-Roman', sans-serif;
+    font-size: 14px;
+    color: #001b2d;
+    background-color: #fff;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.rates-search input::placeholder {
+    color: #999;
+    font-family: 'Avenir-Roman', sans-serif;
+    font-size: 14px;
+}
+
+.rates-search-btn {
+    position: absolute;
+    right: 4px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background-color: #008fd9;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.rates-commercial-link {
+    font-family: 'Avenir-Medium', sans-serif;
+    font-size: 14px;
+    color: #008fd9;
+    margin-top: 15px;
+    text-decoration: underline;
+}
+
 /** Billing Page Layout **/
 
 .billing-section {
@@ -647,6 +718,14 @@ body.menu-open {
 
     .page-header h1 {
         font-size: 42px;
+    }
+
+    .page-header-rates h1 {
+        font-size: 42px;
+    }
+
+    .rates-search {
+        max-width: 460px;
     }
 
     .billing-section {
@@ -880,6 +959,26 @@ body.menu-open {
     .page-header h1 {
         font-size: 32px;
         padding: 0 20px;
+    }
+
+    .page-header-rates {
+        padding: 40px 20px 30px;
+    }
+
+    .page-header-rates h1 {
+        font-size: 32px;
+    }
+
+    .rates-search {
+        max-width: 90%;
+    }
+
+    .rates-search input {
+        font-size: 13px;
+    }
+
+    .rates-search input::placeholder {
+        font-size: 13px;
     }
 
     .billing-section {
