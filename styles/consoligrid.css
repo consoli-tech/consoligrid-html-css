@@ -676,6 +676,95 @@ body {
     color: #000;
 }
 
+/** News Page **/
+
+.news-container {
+    padding: 60px 80px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.news-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.news-card-title {
+    font-family: 'Avenir-Medium', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #001b2d;
+    margin: 0 0 10px;
+    line-height: 1.4;
+}
+
+.news-card-meta {
+    font-family: 'Avenir-Roman', sans-serif;
+    font-size: 13px;
+    color: #666;
+    margin: 0 0 5px;
+}
+
+.news-card-category {
+    font-family: 'Avenir-Roman', sans-serif;
+    font-size: 13px;
+    color: #666;
+    margin: 0 0 12px;
+}
+
+.news-card-category a {
+    color: #008fd9;
+    text-decoration: underline;
+}
+
+.news-card-badge {
+    display: inline-block;
+    font-family: 'Avenir-Medium', sans-serif;
+    font-size: 12px;
+    color: #fff;
+    background-color: #26a71a;
+    border-radius: 4px;
+    padding: 3px 10px;
+    margin-bottom: 15px;
+    align-self: flex-start;
+}
+
+.news-card-excerpt {
+    font-family: 'Avenir-Roman', sans-serif;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.7;
+    margin: 0 0 20px;
+    flex-grow: 1;
+}
+
+.news-card-btn {
+    display: inline-block;
+    font-family: 'Avenir-Medium', sans-serif;
+    font-size: 14px;
+    color: #fff;
+    background-color: #008fd9;
+    border-radius: 34px;
+    padding: 12px 0;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+
+.news-card-btn:hover {
+    background-color: #0077b6;
+}
+
 /** Utils **/
 
 .margin-bottom-30-px {
@@ -858,6 +947,16 @@ body.menu-open {
     .system-card {
         padding: 25px 60px;
         font-size: 18px;
+    }
+
+    /** News Page **/
+    .news-container {
+        padding: 50px 40px;
+    }
+
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
     }
 }
 
@@ -1158,6 +1257,28 @@ body.menu-open {
         padding: 20px 15px;
         font-size: 16px;
         text-align: center;
+    }
+
+    /** News Page **/
+    .news-container {
+        padding: 30px 15px;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .news-card {
+        padding: 25px 20px;
+    }
+
+    .news-card-title {
+        font-size: 16px;
+    }
+
+    .news-card-excerpt {
+        font-size: 13px;
     }
 
 }
