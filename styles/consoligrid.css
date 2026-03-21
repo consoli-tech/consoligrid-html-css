@@ -774,6 +774,100 @@ body {
     background-color: #0077b6;
 }
 
+/** Post Detail Page **/
+
+.post-content-wrapper {
+    background-color: #f2f9fd;
+}
+
+.post-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 80px 0;
+}
+
+.post-content {
+    padding-bottom: 30px;
+}
+
+.post-comments-wrapper {
+    background-color: #fff;
+}
+
+.post-title {
+    font-family: 'Avenir-Medium', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #001b2d;
+    margin: 0 0 12px;
+}
+
+.post-meta {
+    font-family: 'Avenir-Roman', sans-serif;
+    font-size: 13px;
+    color: #999;
+    margin: 0 0 5px;
+}
+
+.post-category {
+    font-family: 'Avenir-Roman', sans-serif;
+    font-size: 13px;
+    color: #999;
+    margin: 0 0 12px;
+}
+
+.post-category a {
+    color: #008fd9;
+    text-decoration: none;
+}
+
+.post-category a:hover {
+    text-decoration: underline;
+}
+
+.post-body {
+    font-family: 'Avenir-Roman', sans-serif;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.7;
+    margin: 20px 0 25px;
+}
+
+.post-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.post-link-btn {
+    display: inline-block;
+    font-family: 'Avenir-Medium', sans-serif;
+    font-size: 14px;
+    color: #fff;
+    background-color: #008fd9;
+    border-radius: 25px;
+    padding: 12px 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.post-link-btn:hover {
+    background-color: #0077b6;
+}
+
+.post-comments {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px 80px 60px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.post-comments p {
+    font-family: 'Avenir-Roman', sans-serif;
+    font-size: 15px;
+    color: #001b2d;
+}
+
 /** Contact Page **/
 
 .contact-section {
@@ -1101,6 +1195,15 @@ body.menu-open {
     .news-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 25px;
+    }
+
+    /** Post Detail Page **/
+    .post-container {
+        padding: 30px 40px 0;
+    }
+
+    .post-comments {
+        padding: 25px 40px 50px;
     }
 
     /** Contact Page **/
@@ -1432,6 +1535,33 @@ body.menu-open {
 
     .news-card-excerpt {
         font-size: 13px;
+    }
+
+    /** Post Detail Page **/
+    .post-container {
+        padding: 20px 15px 0;
+    }
+
+    .post-comments {
+        padding: 25px 15px 40px;
+    }
+
+    .post-title {
+        font-size: 20px;
+    }
+
+    .post-body {
+        font-size: 14px;
+    }
+
+    .post-links {
+        flex-direction: column;
+    }
+
+    .post-link-btn {
+        font-size: 13px;
+        padding: 10px 20px;
+        text-align: center;
     }
 
     /** Contact Page **/
