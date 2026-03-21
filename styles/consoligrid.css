@@ -900,6 +900,14 @@ body {
     color: #999;
 }
 
+.comments-empty {
+    font-family: 'Avenir-Roman', sans-serif;
+    font-size: 15px;
+    color: #999;
+    line-height: 1.6;
+    margin: 0;
+}
+
 .comments-response-to {
     font-family: 'Avenir-Roman', sans-serif;
     font-size: 13px;
