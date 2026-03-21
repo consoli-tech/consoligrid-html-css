@@ -872,6 +872,184 @@ body {
     color: #001b2d;
 }
 
+/** Post Comments Section **/
+
+.post-comments-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 80px 60px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.comments-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.comments-heading {
+    font-family: 'Avenir-Medium', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #001b2d;
+    margin: 0 0 10px;
+}
+
+.comments-count {
+    font-weight: 400;
+    color: #999;
+}
+
+.comments-response-to {
+    font-family: 'Avenir-Roman', sans-serif;
+    font-size: 13px;
+    color: #666;
+    margin: 0 0 25px;
+}
+
+.comment {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.comment-avatar img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.comment-author {
+    font-family: 'Avenir-Medium', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #001b2d;
+    margin: 0 0 2px;
+}
+
+.comment-date {
+    font-family: 'Avenir-Roman', sans-serif;
+    font-size: 12px;
+    color: #999;
+    margin: 0 0 8px;
+}
+
+.comment-text {
+    font-family: 'Avenir-Roman', sans-serif;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+    margin: 0 0 6px;
+}
+
+.comment-reply-link {
+    font-family: 'Avenir-Medium', sans-serif;
+    font-size: 13px;
+    color: #008fd9;
+    text-decoration: none;
+}
+
+.comment-reply-link:hover {
+    text-decoration: underline;
+}
+
+.comment-reply-form {
+    background-color: #f2f9fd;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.reply-heading {
+    font-family: 'Avenir-Medium', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #001b2d;
+    margin: 0 0 10px;
+}
+
+.reply-notice {
+    font-family: 'Avenir-Roman', sans-serif;
+    font-size: 12px;
+    color: #999;
+    margin: 0 0 20px;
+    line-height: 1.5;
+}
+
+.reply-label {
+    display: block;
+    font-family: 'Avenir-Medium', sans-serif;
+    font-size: 13px;
+    color: #001b2d;
+    margin-bottom: 6px;
+}
+
+.reply-textarea {
+    width: 100%;
+    min-height: 100px;
+    font-family: 'Avenir-Roman', sans-serif;
+    font-size: 14px;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 15px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.reply-textarea::placeholder,
+.reply-input::placeholder {
+    color: #bbb;
+}
+
+.reply-input {
+    width: 100%;
+    font-family: 'Avenir-Roman', sans-serif;
+    font-size: 14px;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.reply-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.reply-checkbox input[type="checkbox"] {
+    margin-top: 3px;
+}
+
+.reply-checkbox label {
+    font-family: 'Avenir-Roman', sans-serif;
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.reply-submit-btn {
+    width: 100%;
+    font-family: 'Avenir-Medium', sans-serif;
+    font-size: 15px;
+    color: #fff;
+    background-color: #008fd9;
+    border: none;
+    border-radius: 6px;
+    padding: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reply-submit-btn:hover {
+    background-color: #0077b6;
+}
+
 /** Contact Page **/
 
 .contact-section {
@@ -1208,6 +1386,10 @@ body.menu-open {
 
     .post-comments {
         padding: 25px 40px 50px;
+    }
+
+    .post-comments-section {
+        padding: 30px 40px 50px;
     }
 
     /** Contact Page **/
@@ -1566,6 +1748,20 @@ body.menu-open {
         font-size: 13px;
         padding: 10px 20px;
         text-align: center;
+    }
+
+    .post-comments-section {
+        padding: 20px 15px 40px;
+    }
+
+    .comments-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .comments-heading,
+    .reply-heading {
+        font-size: 18px;
     }
 
     /** Contact Page **/
