@@ -776,6 +776,10 @@ body {
 
 /** Post Detail Page **/
 
+.no-page-header {
+    padding-top: 40px;
+}
+
 .post-content-wrapper {
     background-color: #f2f9fd;
 }
