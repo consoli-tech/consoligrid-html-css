@@ -716,14 +716,34 @@ body {
 /** Areas We Serve Layout **/
 
 .areas-we-serve {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
 }
 
-.areas-we-serve img {
-    margin: 20px 20px;
-    height: 250px;
+.areas-we-serve #map {
+    height: 600px;
+    width: 100%;
+}
+
+.areas-we-serve #legend {
+    background: white;
+    padding: 10px;
+    margin: 10px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    border: 1px solid black;
+}
+
+.areas-we-serve .legend-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.areas-we-serve .legend-color {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+    vertical-align: middle;
 }
 
 /** Components **/
